@@ -4,16 +4,16 @@ const UsuarioSchema = Schema({
 
     name: {
         type: String,
-        require: true
+        required: true
     },
     email: {
         type: String,
-        require: true,
+        required: true,                                                 //ES REQUIRED, EN GITHUB ESTARÁ SIN LA D
         unique: true
     },
     password: {
         type: String,
-        require: true
+        required: true
     }
 });
 
