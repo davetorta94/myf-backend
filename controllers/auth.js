@@ -1,11 +1,12 @@
-const bcrypt = require('bcryptjs');
 const Usuario = require('../models/usuario');
+
+//const bcrypt = require('bcryptjs');
 //const { generarJWT } = require('../helpers/jwt');
 
 
 const crearUsuario = async(req, res) => {
 
-    const {name, email, password} = req.body;
+    const {name, email, number} = req.body;
 
     try {
 
@@ -20,10 +21,10 @@ const crearUsuario = async(req, res) => {
 
          usuario = new Usuario(req.body);
 
-         //encriptar contraseña
+        // //encriptar contraseña
 
-         const salt = bcrypt.genSaltSync();
-         usuario.password = bcrypt.hashSync( password, salt);
+        // const salt = bcrypt.genSaltSync();
+        // usuario.password = bcrypt.hashSync( password, salt);
 
         await usuario.save();
 

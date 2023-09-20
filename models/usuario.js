@@ -11,7 +11,7 @@ const UsuarioSchema = Schema({
         required: true,                                                 //ES REQUIRED, EN GITHUB ESTARÁ SIN LA D
         unique: true
     },
-    password: {
+    number: {
         type: String,
         required: true
     }
