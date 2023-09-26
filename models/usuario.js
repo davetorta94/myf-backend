@@ -14,6 +14,11 @@ const UsuarioSchema = Schema({
     number: {
         type: String,
         required: true
+    },
+    method: {
+        type: String,
+        enum: ['whatsapp','llamada','email'],
+        required: true,
     }
 });
 
